@@ -4,12 +4,11 @@ function displayTime() {
     let min = d.getMinutes();
     let sec = d.getSeconds();
     let amOrPm = "AM"
+    if (hour >= 12) {
+        amOrPm = "PM";
+    }
 
     document.getElementById("clock").innerHTML = `${hour}:${min}:${sec} ${amOrPm}`;
 }
 
 setInterval(displayTime, 1000);
-
-//log 
-let log = console.log.bind(document)
-log(`sim ${5}`)
