@@ -5,7 +5,7 @@ function displayTime() {
     let sec = d.getSeconds();
     let amOrPm = "AM"
 
-    document.getElementById("clock").innerHTML = `${hour}:${min}:${sec}`;
+    document.getElementById("clock").innerHTML = `${hour}:${min}:${sec} ${amOrPm}`;
 }
 
 setInterval(displayTime, 1000);
